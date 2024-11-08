@@ -1,6 +1,6 @@
-import Image from "next/image";
-import FormData from "@/components/ui/resumeData";
-import Header from "@/header/page";
+// import Image from "next/image";
+// import FormData from "@/components/ui/resumeData";
+// import Header from "@/header/page";
 import Hero from "@/components/ui/heroSection";
 import Footer from "@/components/ui/footer";
 

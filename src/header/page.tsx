@@ -29,8 +29,7 @@ const Header = () => {
                 </li>
             </ul>
 
-            {/* Uncomment this line if you want to use the Button component */}
-            {/* <Button variant="outline" className="bg-blue-700">Edit</Button> */}
+            
         </div>
     );
 };
