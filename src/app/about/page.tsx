@@ -2,7 +2,7 @@
 
 import React from "react";
 import Head from "next/head";
-
+import Link from "next/link";
 const About = () => {
   return (
     <>
@@ -25,16 +25,18 @@ const About = () => {
           <h2 className="text-3xl font-semibold text-center text-blue-400 mb-6">Features</h2>
           <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Customizable Templates</h3>
-              <p className="text-lg">Choose from a variety of professional templates to match your personal style.</p>
-            </div>
-            <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Easy-to-Use Interface</h3>
               <p className="text-lg">The user-friendly interface makes it easy to fill in your details and generate your resume instantly.</p>
             </div>
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Instant PDF Download</h3>
               <p className="text-lg">Download your resume as a PDF in just a few clicks, ready to send to potential employers.</p>
+            </div>
+            <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
+              <p className="text-md">
+                This project uses TypeScript, Tailwind CSS, NEXT.js, and Canva for high performance, scalability, and maintainability, delivering a seamless and efficient development experience with an intuitive user interface.
+              </p>
             </div>
           </div>
         </section>
@@ -48,13 +50,13 @@ const About = () => {
             </p>
             <p className="text-lg font-semibold">Created by: Engineer Ather Ali</p>
             <p>
-            Contact us:{" "}
-            <a
-              href="mailto:engr.atherali@gmail.com"
-              className="hover:underline"
-            >
-             engr.atherali@gmail.com
-            </a></p>
+              Contact us:{" "}
+              <a
+                href="mailto:engr.atherali@gmail.com"
+                className="hover:underline"
+              >
+                engr.atherali@gmail.com
+              </a></p>
           </div>
         </section>
 
@@ -62,9 +64,11 @@ const About = () => {
         <section className="bg-gray-800 text-center py-12">
           <h2 className="text-3xl font-semibold text-blue-400 mb-6">Get Started</h2>
           <p className="text-lg mb-6">Ready to create your perfect resume? Start now and take the first step towards your next career opportunity!</p>
-          <button className="inline-block btn-color text-white text-lg px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
-            Create My Resume
-          </button>
+          <Link href="/resumeForm">
+            <button className="inline-block btn-color text-white text-lg px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
+              Create Resume
+            </button>
+          </Link>
         </section>
       </div>
     </>

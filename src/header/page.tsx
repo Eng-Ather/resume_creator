@@ -16,10 +16,10 @@ const Header = () => {
                         height={50}
                         priority
                     />
-                    <h1 className="xl:text-lg lg:text-lg md:text-md sm:text-sm font-semibold">Resume Generator</h1>
+                    <h1 className="xl:text-lg lg:text-lg md:text-md text-sm font-semibold">C.V Generator</h1>
                 </li>
 
-                <li className="flex gap-4 xl:text-md lg:text-md md:text-md sm:text-sm  ">
+                <li className="flex gap-2 xl:text-lg lg:text-lg md:text-md text-md py-5" >
                     <Link href="/about" className= " px-3 py-1 rounded-full hover:bg-blue-600 transition duration-300">
                         About
                     </Link>
