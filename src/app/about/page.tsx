@@ -57,6 +57,30 @@ const About = () => {
               >
                 engr.atherali@gmail.com
               </a></p>
+              <div className=" h-20 mx-auto text-5xl flex justify-center gap-8 items-center">
+            {/* github account link */}
+            <a
+              href="https://github.com/Eng-Ather"
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i className="fa-brands fa-square-github text-white"></i></a>
+
+            {/*    Linkedin account link */}
+            <a
+              href="https://www.linkedin.com/in/eng-ather-ali-21bb29266/"
+              target="_blank">
+              <i className="fa-brands fa-linkedin text-blue-800"></i>
+            </a>
+
+            {/*    npm account link */}
+            <a
+              href="https://www.npmjs.com/~ather.siddiqui"
+              target="_blank">
+              <i className="fa-brands fa-npm text-red-500 text-5xl "></i>
+            </a>
+          </div>
+
           </div>
         </section>
 
