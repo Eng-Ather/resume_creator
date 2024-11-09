@@ -118,6 +118,7 @@ const Form = () => {
               <input
                 type="email"
                 name="email"
+                maxLength={15}
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md mt-2 bg-white text-gray-900"
@@ -130,6 +131,7 @@ const Form = () => {
               <input
                 type="tel"
                 name="phone"
+                maxLength={11}
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md mt-2 bg-white text-gray-900"
@@ -142,6 +144,7 @@ const Form = () => {
               <input
                 type="string"
                 name="address"
+                maxLength={45}
                 value={formData.address}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md mt-2 bg-white text-gray-900"
@@ -154,6 +157,7 @@ const Form = () => {
               <input
                 type="text"
                 name="jobTitle"
+                maxLength={30}
                 value={formData.jobTitle}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md mt-2 bg-white text-gray-900"
@@ -212,14 +216,14 @@ const Form = () => {
         </div>
 
         {/* *********************** Right Section  **********************/}
-        <div className=" sm:w-full md:w-full xl:w-1/2 max-w-3xl w-full">
+        <div className=" sm:w-full md:w-full xl:w-1/2 max-w-1/2 w-1/2">
           <div id="cv-template" className="text-sm sm:text-sm md:text-lg border border-gray-300 p-1 md:p-8 rounded-lg shadow-xl bg-white text-gray-900">
             <h2 className="text-2xl font-bold text-center text-blue-600 mb-8">{formData.name || "Ather Ali"}</h2>
 
             {/* Profile Section with Image and Bio Data */}
             <div className="w-auto flex flex-row items-center justify-center my-12">
               {/* Profile Image */}
-              <div className="w-32 h-32 md:rounded-full  overflow-hidden border-4 border-blue-600 mb-4 md:mb-0 md:mr-6">
+              <div className="w-32 h-32 md:rounded-full  overflow-hidden border-2 border-blue-500 mb-4 md:mb-0 md:mr-6">
                 <img
                   src={formData.profileImage || "https://via.placeholder.com/100"} // Placeholder if no image is uploaded
                   alt="Profile"
@@ -228,32 +232,32 @@ const Form = () => {
               </div>
 
               {/* Bio Data Section */}
-              <div className="text-center md:text-left">
-                <p ><strong className="  text-xl">{formData.jobTitle.toLocaleUpperCase() || "Software Developer"}</strong></p>
-                <p ><strong className=" text-blue-600">Email:</strong> {formData.email || "engr.ather.93@gmail.com"}</p>
-                <p ><strong className=" text-blue-600">Phone:</strong> {formData.phone || "+923320145410"}</p>
-                <p ><strong className=" text-blue-600">Address:</strong> {formData.address || "Provide your address"}</p>
+              <div className=" text-center md:text-left">
+                <p className="break-words text-decoration-line: underline"><strong className=" text-xl ">{formData.jobTitle.toLocaleUpperCase() || "Software Developer"}</strong></p>
+                <p className="break-words first-letter:text-blue-600"><strong>Email:</strong> {formData.email || "engr.ather.93@gmail.com"}</p>
+                <p className="break-words first-letter:text-blue-600"><strong >Phone:</strong> {formData.phone || "+923320145410"}</p>
+                <p className="break-words first-letter:text-blue-600"><strong >Address:</strong> {formData.address || "Provide your address"}</p>
               </div>
             </div>
 
             {/* Experience Section */}
             <div className="mb-6">
               <h4 className="text-xl font-semibold text-blue-600 mb-2">Experience</h4>
-              <p className="">{formData.experience || "Enter your work experience here."}</p>
+              <p className="break-words">{formData.experience || "Enter your work experience here."}</p>
               <hr className="w-full mt-3 border-t-2 border-gray-400" />
             </div>
 
             {/* Skills Section */}
             <div className="mb-6">
               <h4 className="text-xl font-semibold text-blue-600 mb-2">Skills</h4>
-              <p className="">{formData.skills || "List your skills here."}</p>
+              <p className="break-words">{formData.skills || "List your skills here."}</p>
               <hr className="w-full mt-3 border-t-2 border-gray-400" />
             </div>
 
             {/* Education Section */}
             <div className="mb-6">
               <h4 className="text-xl font-semibold text-blue-600 mb-2">Education</h4>
-              <p className="">{formData.education || "Enter your education history here."}</p>
+              <p className="break-words">{formData.education || "Enter your education history here."}</p>
               <hr className="w-full mt-3 border-t-2 border-gray-400" />
             </div>
 
